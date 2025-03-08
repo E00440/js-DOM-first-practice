@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Emmanuel Malik">
+  <title>09-exercises</title>
+</head>
+
+<body>
+  <!-- 9a -->
+  <button class="js-nine-a">9a</button>
+
+  <!-- 9b -->
+  <button class="js-nine-b">9b</button>
+
+  <!-- 9c -->
+  <p>
+    <button class="js-heads" onclick="
+      document.querySelector('.js-option').innerHTML = 'You chose: heads';
+      ">
+      heads
+    </button>
+
+    <button class="js-tails" onclick="
+      document.querySelector('.js-option').innerHTML = 'You chose: tails';
+      ">
+      tails
+    </button>
+  </p>
+  <p class="js-option"></p>
+
+  <!-- 9d -->
+  <input class="js-name-input" placeholder="Name" onkeydown="
+    /* event.key; */ // code will work with/without this
+    if (event.key === 'Enter') {
+      nameInput();
+    }
+    ">
+  <button class="js-input-button" onclick="
+    nameInput();
+    ">
+    Submit
+  </button>
+  <p class="js-input-p"></p>
+
+
+  <script>
+    //9a
+    console.log(document.querySelector('.js-nine-a'));
+
+    //9b
+    document.querySelector('.js-nine-b').innerHTML = '9b done!';
+
+    //9d
+    function nameInput() {
+      const text = document.querySelector('.js-name-input').value;
+
+      document.querySelector('.js-input-p').innerHTML = `Your name is: ${text}`;
+    }
+    
+  </script>
+  
+</body>
+</html>
